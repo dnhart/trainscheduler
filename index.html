@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+   <meta name="author" content="D'Ann Hart">
+
+
+    <!--favicon code -->
+
+    <!-- end favicon code -->
+
+    <title>Train Scheduler</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron.css" rel="stylesheet">
+
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+      <!-- Firebase Reference -->
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
+
+  <!--font embed -->
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+            <h1 class="text-center">Train Scheduler</h1>
+                <h2 class = "text-center"> A Train Schedule Reference </h2>
+</div>
+      
+ <div class="container">
+
+
+
+
+      <!-- Example row of columns -->
+      <div class="row">
+          <div class="col-sm-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+              <th></th>
+              
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- <tr>
+              <td id="trainName"></td>
+              <td id="destination"></td>
+              <td id="Frequency"></td>
+              <td id="nextArrival"></td>
+              <td id="minutesAway"></td>
+              <td id="deleteButton"></td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+        </div>
+      </div>
+<div class="row">
+           <div class="col-sm-12">
+               <br>
+               <!-- First panel is for handling the search parameters -->
+               <div class="panel panel-primary" style="border-color: #20315A ">
+                   <div class="panel-heading" style="background-color: #20315A  ; color: white;">
+                       <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>   Add Train</strong></h3>
+                   </div>
+                   <div class="panel-body">
+                       <!-- Here we create an HTML Form for handling the inputs-->
+                       <form role="form">
+                           <!-- Here we create the text box for capturing the search term-->
+                           <div class="form-group">
+                               <label for="trainNameInput">Train Name</label>
+                               <input type="text" class="form-control" id="trainNameInput" placeholder="Train Name">
+                           </div>
+                           <!-- Here we capture the number of records that the user wants to retrieve  -->
+                           <div class="form-group">
+                               <label for="destinationInput">Destination</label>
+                                <input type="text" class="form-control" id="destinationInput" placeholder="Destination">
+                           </div>
+                           <!-- Start YearParameter-->
+                           <div class="form-group">
+                               <label for="frequencyInput">Train Frequency (minutes)</label>
+                               <input type="text" class="form-control" id="frequencyInput" placeholder="Train Frequency">
+                           </div>
+                           <!--End Year Parameter -->
+                           <div class="form-group">
+                               <label for="firstTimeInput">First Train Time (HH:MM, military time)</label>
+                               <input type="text" class="form-control" id="firstTimeInput" placeholder="Time of First Train">
+                           </div>
+                           <!--submit button -->
+                           <button type="submit" class="btn btn-default" id="submit"><i class="fa fa-search"></i> Submit</button>
+                           <button type="button" class="btn btn-default" id="ClearForm"><i class="fa fa-trash"></i> Clear Form</button>
+                           <!--  <button type="button" class="btn btn-default" id="updateTrains"><i class="fa fa-search"></i> Update Trains</button> -->
+                           <button type="button" class="btn btn-default" id="ClearResult"><i class="fa fa-trash"></i> Clear Results</button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/javascript/vendor/jquery.min.js"><\/script>')</script>
+    <script src="assets/javascript/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/javascript/train.js"></script>
+  </body>
+</html>
